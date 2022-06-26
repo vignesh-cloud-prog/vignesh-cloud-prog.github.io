@@ -513,6 +513,9 @@ img{
 }
 
 .skills__django{
+    width: 80%;
+}
+.skills__nodejs{
     width: 90%;
 }
 
@@ -943,6 +946,7 @@ img{
 /*========== SCROLL UP ==========*/
 .scrollup{
     position: fixed;
+    display: none;
     right: 1rem;
     bottom: 5rem;
     background-color: var(--first-color);
@@ -964,6 +968,7 @@ img{
 /* Show scroll */
 .show-scroll{
     bottom: 5rem;
+    display: block;
 }
 
 /*========== SCROLL BAR ==========*/
