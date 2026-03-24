@@ -227,3 +227,27 @@ function sendmail() {
   console.log(mail);
   window.location.href = mail;
 }
+
+/*==================== BLOG NAV LINK ====================*/
+document.getElementById("nav-blog-link").href = SITE_CONFIG.BLOG_URL;
+
+/*==================== EXPERIENCE ACCORDION ====================*/
+document.querySelectorAll("[data-accordion]").forEach((header) => {
+    header.addEventListener("click", () => {
+        const details = header.nextElementSibling;
+        const isOpen = header.classList.contains("accordion--open");
+
+        // Close all open accordions
+        document.querySelectorAll("[data-accordion].accordion--open").forEach((openHeader) => {
+            openHeader.classList.remove("accordion--open");
+            openHeader.nextElementSibling.classList.remove("accordion--open");
+        });
+
+        // Open clicked one if it was closed
+        if (!isOpen) {
+            header.classList.add("accordion--open");
+            details.style.setProperty("--details-height", details.scrollHeight + "px");
+            details.classList.add("accordion--open");
+        }
+    });
+});

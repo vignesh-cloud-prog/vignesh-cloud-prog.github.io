@@ -651,6 +651,59 @@ img{
     border-bottom: 3px solid var(--first-color-alt);
     border-radius: .2rem;
 }
+
+/*==================== QUALIFICATION ACCORDION ====================*/
+.qualification__header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+    gap: .5rem;
+}
+
+.qualification__arrow{
+    font-size: 1.2rem;
+    color: var(--first-color);
+    transition: transform .3s;
+    flex-shrink: 0;
+    margin-top: .15rem;
+}
+
+.qualification__header.accordion--open .qualification__arrow{
+    transform: rotate(-180deg);
+}
+
+.qualification__details{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s ease;
+}
+
+.qualification__details.accordion--open{
+    max-height: var(--details-height, 1000px);
+}
+
+.qualification__details ul{
+    margin: .5rem 0 .25rem .75rem;
+    padding: 0;
+    list-style: disc;
+}
+
+.qualification__details ul li{
+    font-size: var(--smaller-font-size);
+    color: var(--text-color);
+    margin-bottom: .35rem;
+    line-height: 1.5;
+}
+
+.qualification__stack{
+    font-size: var(--smaller-font-size);
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+    margin-top: .4rem;
+    margin-bottom: .5rem;
+}
+
 /*==================== SERVICES ====================*/
 .services__container{
     gap: 1.5rem;
