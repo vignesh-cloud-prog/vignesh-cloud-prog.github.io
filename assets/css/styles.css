@@ -779,6 +779,10 @@ img{
     overflow: initial;
 }
 
+.swiper-slide:not(.swiper-slide-active){
+    visibility: hidden;
+}
+
 .portfolio__content{
     padding: 0 1.5rem;
 }
