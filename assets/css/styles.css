@@ -1269,7 +1269,7 @@ img{
     }
 
     .services__container{
-        grid-template-columns: repeat(3, 238px);
+        grid-template-columns: repeat(4, 218px);
     }
 
     .portfolio__content{
